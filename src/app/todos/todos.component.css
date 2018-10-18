@@ -1,0 +1,203 @@
+.done-true {
+    text-decoration: line-through;
+	color: lightgrey;
+}
+
+.list {
+  margin-top: 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+.item-text {
+	margin-left: 20%;
+}
+
+
+.cross {
+  float: right;
+}
+
+.st {
+  float: left;
+}
+
+li:last-child {
+  border: none;
+}
+
+
+
+li a {
+  color: #000;
+  display:inline-block;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: parent;
+}
+
+li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
+
+body {
+  margin: 2em;
+  width: 70%;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+  display: inline-block
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+input,
+span,
+label,
+textarea {
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 22px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* custom */
+
+input.custom,
+textarea.custom {
+  font-size: 48px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+input.custom + label,
+textarea.custom + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid #369;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.custom:focus + label,
+textarea.custom:focus + label {
+  width: 80%;
+}
+
+input.custom:focus,
+input.custom:valid {
+  padding-top: 35px;
+}
+
+textarea.custom:valid,
+textarea.custom:focus {
+  margin-top: 35px;
+}
+
+input.custom:focus + label > span,
+input.custom:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #333;
+}
+
+textarea.custom:focus + label > span,
+textarea.custom:valid + label > span {
+  top: -150px;
+  font-size: 22px;
+  color: #333;
+}
+
+input.custom:valid + label,
+textarea.custom:valid + label {
+  border-color: green;
+}
+
+input.custom:invalid,
+textarea.custom:invalid {
+  box-shadow: none;
+}
+
+input.custom + label > span,
+textarea.custom + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 48px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  opacity: 0;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #EEE;
+}
+
+input[type="submit"]:active {
+  background: #999;
+}
+
+input.custom:valid ~ input[type="submit"], textarea.custom:valid ~ input[type="submit"] {
+  -webkit-animation: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+
+input.custom:invalid ~ input[type="submit"], textarea.custom:invalid ~ input[type="submit"] {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+

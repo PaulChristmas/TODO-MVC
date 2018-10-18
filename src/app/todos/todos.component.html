@@ -1,0 +1,17 @@
+<input [(ngModel)]="newTodo" (keyup.enter)="createItem()" class="custom" id="newTodo" required autocomplete="off" />
+<label for="newTodo"><span>{{placeholder}}</span></label>
+
+<ul>
+
+<section class="list" *ngIf="items.length > 0">
+  <li *ngFor="let item of items">
+    <a class=done-{{item.done}}>
+	  <button class="st" (click)="setStatus(item)"> {{getStatus(item.done)}} </button>  
+	  <button class="cross" (click)="remove(item.id)"> X </button> 
+	  <label class="item-text"> {{item.name}} </label> 
+	</a> 
+	
+  </li>
+  
+</section>
+</ul>
